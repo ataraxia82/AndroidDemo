@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         final List<Person> perList = new ArrayList<Person>();
         for(int i=0; i<=10; i++) {
-            perList.add(new Person("姓名"+i,"13567899" + i, 200000));
+            perList.add(new Person("姓名"+i,"13567899" + i, 200000+""));
         }
         listView.setAdapter(new BaseAdapter() {
             @Override
@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
                     view = convertView;
                 }
 
-                TextView name = (TextView) view.findViewById(R.id.name);
-                TextView phone = (TextView) view.findViewById(R.id.phone);
-                TextView salary = (TextView) view.findViewById(R.id.salary);
+                TextView v_name = (TextView) view.findViewById(R.id.text_name);
+                TextView v_phone = (TextView) view.findViewById(R.id.text_phone);
+                TextView v_salary = (TextView) view.findViewById(R.id.text_salary);
 
-                name.setText(person.name);
-                phone.setText(person.phone);
-                salary.setText(person.salary);
+                v_name.setText(person.name);
+                v_phone.setText(person.phone);
+                v_salary.setText(person.salary);
 
                 return view;
             }
