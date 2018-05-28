@@ -1,69 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.cn.androiddemo.MainActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp">
-        <TextView
-            android:text="#99cc00"
-            android:background="#99cc00"
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
+    <Button
+        android:text="中心"
+        android:id="@+id/btn_center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="#993333"
-            android:background="#993333"
-            android:gravity="center_horizontal|center_vertical"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
+    <Button
+        android:text="中上"
+        android:layout_alignLeft="@id/btn_center"
+        android:layout_above="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="#336633"
-            android:background="#336633"
-            android:gravity="center_horizontal|bottom"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+    <Button
+        android:text="左上"
+        android:layout_toLeftOf="@id/btn_center"
+        android:layout_above="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp">
+    <Button
+        android:text="右上"
+        android:layout_toRightOf="@id/btn_center"
+        android:layout_above="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="#cc9966"
-            android:background="#cc9966"
-            android:gravity="center_vertical|left"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp" />
+    <Button
+        android:text="左边"
+        android:layout_alignTop="@id/btn_center"
+        android:layout_toLeftOf="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="#cccc00"
-            android:background="#cccc00"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp" />
+    <Button
+        android:text="左下"
+        android:layout_below="@id/btn_center"
+        android:layout_toLeftOf="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="#ffcc99"
-            android:background="#ffcc99"
-            android:gravity="center_vertical|right"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp" />
-    </LinearLayout>
-</LinearLayout>
+    <Button
+        android:text="右边"
+        android:layout_alignTop="@id/btn_center"
+        android:layout_toRightOf="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="中下"
+        android:layout_alignLeft="@id/btn_center"
+        android:layout_below="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="右下"
+        android:layout_toRightOf="@id/btn_center"
+        android:layout_below="@id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
