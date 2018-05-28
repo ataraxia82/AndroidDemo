@@ -1,71 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.cn.androiddemo.MainActivity">
 
-    <Button
-        android:text="中心"
-        android:id="@+id/btn_center"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ListView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
-    <Button
-        android:text="中上"
-        android:layout_alignLeft="@id/btn_center"
-        android:layout_above="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:text="左上"
-        android:layout_toLeftOf="@id/btn_center"
-        android:layout_above="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:button="@null"
+            android:text="风控"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/gray01"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:text="右上"
-        android:layout_toRightOf="@id/btn_center"
-        android:layout_above="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:button="@null"
+            android:text="账户"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/gray02"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:text="左边"
-        android:layout_alignTop="@id/btn_center"
-        android:layout_toLeftOf="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:button="@null"
+            android:text="收益"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/gray03"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:text="左下"
-        android:layout_below="@id/btn_center"
-        android:layout_toLeftOf="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:text="右边"
-        android:layout_alignTop="@id/btn_center"
-        android:layout_toRightOf="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:text="中下"
-        android:layout_alignLeft="@id/btn_center"
-        android:layout_below="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:text="右下"
-        android:layout_toRightOf="@id/btn_center"
-        android:layout_below="@id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        <RadioButton
+            android:button="@null"
+            android:text="投资"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/gray04"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
