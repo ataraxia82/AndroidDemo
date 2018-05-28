@@ -7,49 +7,36 @@
     tools:context="com.example.cn.androiddemo.MainActivity">
 
     <ListView
+        android:id="@+id/listdata"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
 
-    <LinearLayout
+    <RadioGroup
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:button="@null"
             android:text="风控"
-            android:gravity="center_horizontal"
-            android:drawableTop="@drawable/gray01"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:drawableTop="@drawable/gray01_selector"
+            style="@style/RadioButton" />
 
         <RadioButton
-            android:button="@null"
+            style="@style/RadioButton"
+            android:drawableTop="@drawable/gray02_selector"
             android:text="账户"
-            android:gravity="center_horizontal"
-            android:drawableTop="@drawable/gray02"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:gravity="center_horizontal" />
 
         <RadioButton
-            android:button="@null"
+            style="@style/RadioButton"
+            android:drawableTop="@drawable/gray03_selector"
             android:text="收益"
-            android:gravity="center_horizontal"
-            android:drawableTop="@drawable/gray03"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:gravity="center_horizontal" />
 
         <RadioButton
-            android:button="@null"
+            style="@style/RadioButton"
             android:text="投资"
-            android:gravity="center_horizontal"
-            android:drawableTop="@drawable/gray04"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:drawableTop="@drawable/gray04_selector" />
+    </RadioGroup>
 </LinearLayout>
