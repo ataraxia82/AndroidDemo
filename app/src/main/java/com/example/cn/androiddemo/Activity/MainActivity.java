@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         final List<Person> perList = new ArrayList<Person>();
         for(int i=0; i<=10; i++) {
-            perList.add(new Person("姓名"+i,"11111" + i, 200000));
+            perList.add(new Person("姓名"+i,"13567899" + i, 200000));
         }
         listView.setAdapter(new BaseAdapter() {
             @Override
@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 Person person = perList.get(position);
 
-                View view = View.inflate(MainActivity.this, R.layout.list_item_relative,null);
+                View view = null;
+                if(convertView==null) {
+                    view = View.inflate(MainActivity.this, R.layout.list_item_relative, null);
+                } else {
+                    view = convertView;
+                }
 
                 TextView name = (TextView) view.findViewById(R.id.name);
                 TextView phone = (TextView) view.findViewById(R.id.phone);
