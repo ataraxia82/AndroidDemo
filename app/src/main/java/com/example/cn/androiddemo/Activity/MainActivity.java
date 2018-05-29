@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override  // 如果请求成功则请求结果在result中
             public void onSuccess(String result) {
-                Log.i("zp","result:" + result);
+                //Log.i("zp","result:" + result);
                 // 用来显示请求的结果  json --> List
                 Gson gson =new Gson();
                 final  List<Person> perList =gson.fromJson(result, new TypeToken<List<Person>>(){}.getType());
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         TextView v_salary = (TextView) view.findViewById(R.id.text_salary);
 
 //                        v_name.setText(person.name);
-                        v_name.setImageUrl(person.name);
+                        v_name.setImageUrl(person.name); //显示图片
                         v_tel.setText(person.tel);
                         v_salary.setText(person.salary + "");
 
