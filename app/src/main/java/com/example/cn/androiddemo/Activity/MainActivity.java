@@ -32,8 +32,10 @@ import android.widget.Toast;
 import android.util.Log;
 import com.loopj.android.image.SmartImageView;
 
+@ContentView(value = R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
+    @ViewInject(value = R.id.listdata)
     private ListView listView;
 
     @Override
@@ -72,9 +74,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 事件处理
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
-        listView = (ListView) this.findViewById(R.id.listdata);
+        //listView = (ListView) this.findViewById(R.id.listdata);
+
+        // 此行代码必须添加,主要是获取注解的值
+        x.view().inject(this);
 
         // 配置访问后台请求的参数信息
         RequestParams params = new RequestParams("http://www.jxy-edu.com/ajaxServlet");

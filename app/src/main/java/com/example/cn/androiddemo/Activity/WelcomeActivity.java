@@ -42,6 +42,7 @@ public class WelcomeActivity extends AppCompatActivity {
         for(int i=0; i<resId.length;i++){
             ImageView iv = new ImageView(this);
             iv.setImageResource(resId[i]);
+            iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
             ilist.add(iv);
         }
 
