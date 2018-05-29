@@ -26,6 +26,7 @@ import com.google.gson.reflect.TypeToken;
 
 import android.widget.Toast;
 import android.util.Log;
+import com.loopj.android.image.SmartImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,11 +78,13 @@ public class MainActivity extends AppCompatActivity {
                             view = convertView;
                         }
 
-                        TextView v_name = (TextView) view.findViewById(R.id.text_name);
+//                        TextView v_name = (TextView) view.findViewById(R.id.text_name);
+                        SmartImageView v_name = (SmartImageView) view.findViewById(R.id.image_name);
                         TextView v_tel = (TextView) view.findViewById(R.id.text_phone);
                         TextView v_salary = (TextView) view.findViewById(R.id.text_salary);
 
-                        v_name.setText(person.name);
+//                        v_name.setText(person.name);
+                        v_name.setImageUrl(person.name);
                         v_tel.setText(person.tel);
                         v_salary.setText(person.salary + "");
 
