@@ -1,8 +1,10 @@
 package com.example.cn.androiddemo.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -14,6 +16,8 @@ import com.example.cn.androiddemo.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -31,6 +35,38 @@ import com.loopj.android.image.SmartImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ListView listView;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK) {
+            exitAPP();
+            return false;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
+
+    private boolean isExit = false;
+
+    private void exitAPP() {
+        if(!isExit) {
+            isExit = true;
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_LONG).show();
+
+            new Timer(true).schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    isExit = false;
+                }
+            }, 2000);
+        } else {
+            //跳转主页面
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            startActivity(intent);
+            System.exit(0);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

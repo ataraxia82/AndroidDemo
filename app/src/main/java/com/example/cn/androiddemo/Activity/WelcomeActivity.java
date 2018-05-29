@@ -1,5 +1,7 @@
 package com.example.cn.androiddemo.Activity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +20,13 @@ public class WelcomeActivity extends AppCompatActivity {
     private ViewPager viewPager;
 
     public void startMainActivity(View view) {
+        SharedPreferences sp = getSharedPreferences("welcome_xml", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean("welcome", true).commit();
 
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     @Override
