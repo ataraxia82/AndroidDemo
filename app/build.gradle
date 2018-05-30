@@ -26,4 +26,5 @@ dependencies {
     compile 'org.xutils:xutils:3.5.0'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    compile 'com.android.support:support-v4:23.3.0'
 }
